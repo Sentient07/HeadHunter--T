@@ -1,0 +1,11 @@
+
+weights/
+./__pycache__
+*.ipynb
+*.pyc
+.config/__pycache__
+temp/
+*.csv
+data/*
+run_*.sh
+.vscode/*

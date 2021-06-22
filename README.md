@@ -6,7 +6,7 @@ This repository contains implementation of HeadHunter-T proposed in our CVPR 202
 
 ## Dataset :
 
-The proposed CroHD dataset can be downloaded from [here](https://dev.motchallenge.net/data/Head_Tracking_21/). Please note that tracking ground truth are available only for training set. Test set annotation are upheld for fair evaluation. Please feel free to submit your method's result on the MOTChallenge server directly. 
+The proposed CroHD dataset can be downloaded from [here](https://motchallenge.net/data/Head_Tracking_21/). Please note that tracking ground truth are available only for training set. Test set annotation are upheld for fair evaluation. Please feel free to submit your method's result on the MOTChallenge server directly. 
 
 ## Setup Instructions:
 

@@ -2,6 +2,12 @@
 
 This repository contains implementation of HeadHunter-T proposed in our CVPR 2021 paper, `Tracking Pedestrian Heads in Dense Crowd`. 
 
+
+
+## Dataset :
+
+The proposed CroHD dataset can be downloaded from [here](https://dev.motchallenge.net/data/Head_Tracking_21/). Please note that tracking ground truth are available only for training set. Test set annotation are upheld for fair evaluation. Please feel free to submit your method's result on the MOTChallenge server directly. 
+
 ## Setup Instructions:
 
 In order to execute this codebase the following requirements need to be satisfied. 
@@ -37,8 +43,6 @@ In order to execute this codebase the following requirements need to be satisfie
 	```
 
 
-Note : In order to perform MOT evaluation (in particular for the IDEucl metric), the pull request needs to be merged into py-motmetrics (https://github.com/cheind/py-motmetrics/pull/149)
-
 
 ## Citation :
 
@@ -54,3 +58,7 @@ In case this code / dataset / work helps in your research, please cite us as,
     pages     = {3865-3875}
 }
 ```
+
+
+## Note :
+There is a slight discrepancy between the results observed in MOTChallenge website and what is reported in the paper (Table 12, supplementary). This is due to difference in the evaluation scheme between TrackEval and Py-motmetrics. In order to reproduce the results in the paper, please use the py-motmetric based on this [pull request](https://github.com/cheind/py-motmetrics/pull/149)

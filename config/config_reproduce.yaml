@@ -1,0 +1,45 @@
+# config.yaml
+
+DET:
+    backbone: 'resnet50'
+    det_cfg:
+        trained_model: './FT_R50_epoch_24.pth'
+        pretrain_path: ''
+        confidence_threshold: 0.1
+        nms_threshold: 0.5
+        use_deform: False
+        context: 'cpm'
+        default_filter: False
+        cpmfeat_dim: 1024
+        median_anchor: True
+        upscale_rpn: False
+        benchmark: 'Combined'
+
+TRACKER:
+    inactive_patience: 25
+    im_shape: [1080, 1920]
+    n_particles: 100
+    use_reid: True
+    use_public: True
+
+TRACKTOR:
+    regression_thresh: 0.1
+    detection_confidence: 0.6
+    detection_nms_thresh: 0.3
+    regression_nms_thresh: 0.3
+
+MOTION:
+    n_iterations: 100
+    termination_eps: 0.00001
+
+GEN:
+    save_tracklets: True
+    save_frames: True
+    display_frame: False
+    save_path : './'
+
+CAM:
+    id: 0
+    ip: 127.0.0.1
+    fps: 25
+    switch_between: False

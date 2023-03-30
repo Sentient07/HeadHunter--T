@@ -22,9 +22,9 @@ np.random.seed(seed=12345)
 import configparser
 
 # Tracker specific
-from config.retina_cfg import cfg_re150 as retina_cfg
+from head_detection.data import cfg_res152
 from config.det_cfg import det_cfg
-from obj_detect import objDetect
+from obj_detect import HeadHunter
 from flow_tracker import Tracker
 import argparse
 # create input
@@ -60,7 +60,7 @@ def create_realpair(real_test, file_len=None):
 frame_shape = (args.frame_dim[0], args.frame_dim[1], 3)
 frame_pair = create_realpair(args.base_dir)
 print("Total length is " + str(len(frame_pair)))
-objdetect = objDetect(retina_cfg, det_cfg)
+objdetect = HeadHunter(cfg_res152, det_cfg, None, None)
 tracker_cfg = {}
 tracker_cfg['im_shape'] = frame_shape
 tracker_cfg['inactive_patience'] = 30
